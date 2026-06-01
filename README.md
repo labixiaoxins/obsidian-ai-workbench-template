@@ -23,6 +23,12 @@ bash skill/scripts/install-template.sh "/path/to/Your Obsidian Vault"
 
 ## 图解使用
 
+### 整理前后对比
+
+![Before and after fake vault screenshots](skill/assets/images/before-after-vault-mock.svg)
+
+这是一张虚构截图：目录名、笔记名、图片名都不来自真实知识库，只用来展示“整理前很难找”和“整理后能操作”的差异。
+
 ![Workflow overview](skill/assets/images/workflow-overview.svg)
 
 ### 操作台界面

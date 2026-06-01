@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="1320" viewBox="0 0 1180 1320" role="img" aria-labelledby="title desc">
+  <title id="title">Before and after mock Obsidian vault screenshots</title>
+  <desc id="desc">A privacy-safe fake screenshot showing a messy vault before cleanup and a clearer Chinese Obsidian vault with AI workbench after cleanup.</desc>
+  <defs>
+    <style>
+      .page { fill: #f6f8fb; }
+      .caption { fill: #0f172a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 34px; font-weight: 760; }
+      .sub { fill: #64748b; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 17px; }
+      .sectionTitle { fill: #0f172a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 26px; font-weight: 760; }
+      .window { fill: #1f2430; stroke: #cbd5e1; stroke-width: 2; rx: 18; }
+      .chrome { fill: #151923; rx: 18; }
+      .dotR { fill: #ff5f57; }
+      .dotY { fill: #ffbd2e; }
+      .dotG { fill: #28c840; }
+      .sidebar { fill: #181c26; }
+      .content { fill: #242a36; }
+      .pane { fill: #202633; stroke: #374151; stroke-width: 1.4; rx: 12; }
+      .tab { fill: #2d3544; rx: 8; }
+      .text { fill: #dbe4ef; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; }
+      .muted { fill: #94a3b8; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 14px; }
+      .dim { fill: #64748b; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; }
+      .head { fill: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 24px; font-weight: 720; }
+      .h2 { fill: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 17px; font-weight: 700; }
+      .warn { fill: #f97316; }
+      .ok { fill: #22c55e; }
+      .line { stroke: #475569; stroke-width: 1; }
+      .folderStrong { fill: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; font-weight: 700; }
+      .note { fill: #cbd5e1; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; }
+      .chip { fill: #1d4ed8; rx: 10; }
+      .chip2 { fill: #334155; stroke: #64748b; stroke-width: 1; rx: 10; }
+      .chipText { fill: #eff6ff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; font-weight: 700; }
+      .card { fill: #2d3544; stroke: #475569; stroke-width: 1; rx: 10; }
+      .callout { fill: #0f172a; stroke: #3b82f6; stroke-width: 1.5; rx: 12; }
+      .fake { fill: #38bdf8; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 14px; font-weight: 700; }
+    </style>
+  </defs>
+  <rect class="page" width="1180" height="1320" />
+  <text class="caption" x="54" y="60">Fake Obsidian Vault Transformation</text>
+  <text class="sub" x="54" y="92">All names are fictional. This mockup shows the problem and the result without exposing a real vault.</text>
+
+  <text class="sectionTitle" x="70" y="142">Before: hard to find and reuse</text>
+  <g transform="translate(70,165)">
+    <rect class="window" width="1040" height="470" />
+    <rect class="chrome" width="1040" height="42" />
+    <circle class="dotR" cx="24" cy="21" r="6" />
+    <circle class="dotY" cx="46" cy="21" r="6" />
+    <circle class="dotG" cx="68" cy="21" r="6" />
+    <text class="muted" x="98" y="26">Obsidian - Personal Notes (mock)</text>
+    <rect class="sidebar" x="0" y="42" width="320" height="428" />
+    <rect class="content" x="320" y="42" width="720" height="428" />
+    <text class="h2" x="28" y="78">Files</text>
+    <text class="folderStrong" x="30" y="112">▾ Notes Sync Helper</text>
+    <text class="note" x="58" y="140">Daily Capture.md</text>
+    <text class="note" x="58" y="166">Daily Capture 1.md</text>
+    <text class="note" x="58" y="192">Untitled.md</text>
+    <text class="folderStrong" x="30" y="226">▾ 2026-05-08</text>
+    <text class="note" x="58" y="254">image_001.png</text>
+    <text class="note" x="58" y="280">post.md</text>
+    <text class="note" x="58" y="306">post copy.md</text>
+    <text class="folderStrong" x="30" y="340">▸ AI Memory</text>
+    <text class="folderStrong" x="30" y="366">▸ Automation</text>
+    <text class="folderStrong" x="30" y="392">▸ Inbox</text>
+    <text class="note" x="30" y="426">Screenshot 14.32.01.png</text>
+    <rect class="tab" x="360" y="80" width="164" height="34" />
+    <text class="text" x="382" y="103">Untitled.md</text>
+    <text class="head" x="360" y="158">Where did my note go?</text>
+    <line class="line" x1="360" y1="184" x2="910" y2="184" />
+    <text class="text" x="360" y="224">I wrote something on the right side, but I cannot find it in the left file list.</text>
+    <text class="text" x="360" y="260">There are repeated titles and date folders, but I do not know what each date contains.</text>
+    <rect class="callout" x="360" y="310" width="500" height="105" />
+    <text class="fake" x="385" y="342">Typical pain points</text>
+    <text class="muted" x="385" y="372">• duplicate titles    • English folder names    • loose images mixed with notes</text>
+    <circle class="warn" cx="980" cy="102" r="6" />
+  </g>
+
+  <text class="sectionTitle" x="70" y="710">After: organized and actionable</text>
+  <g transform="translate(70,735)">
+    <rect class="window" width="1040" height="510" />
+    <rect class="chrome" width="1040" height="42" />
+    <circle class="dotR" cx="24" cy="21" r="6" />
+    <circle class="dotY" cx="46" cy="21" r="6" />
+    <circle class="dotG" cx="68" cy="21" r="6" />
+    <text class="muted" x="98" y="26">Obsidian - Second Brain Template (mock)</text>
+    <rect class="sidebar" x="0" y="42" width="320" height="468" />
+    <rect class="content" x="320" y="42" width="720" height="468" />
+    <text class="h2" x="28" y="78">Files</text>
+    <text class="folderStrong" x="30" y="112">▾ 00-首页与导航</text>
+    <text class="note" x="58" y="140">00-首页.md</text>
+    <text class="note" x="58" y="166">00-资料分类导航.md</text>
+    <text class="folderStrong" x="30" y="200">▸ 01-内容创作</text>
+    <text class="folderStrong" x="30" y="226">▸ 02-AI工具与工作流</text>
+    <text class="folderStrong" x="30" y="252">▸ 03-项目复盘</text>
+    <text class="folderStrong" x="30" y="278">▾ 04-资料剪藏</text>
+    <text class="note" x="58" y="306">00-主题标签索引.md</text>
+    <text class="note" x="58" y="332">历史同步记录.md</text>
+    <text class="folderStrong" x="30" y="366">▸ 90-模板</text>
+    <text class="folderStrong" x="30" y="392">▾ AI操作台</text>
+    <text class="note" x="58" y="420">今日工作台.md</text>
+    <text class="note" x="58" y="446">运行结果 / 当前笔记</text>
+    <text class="note" x="58" y="472">备份</text>
+
+    <rect class="pane" x="360" y="72" width="625" height="380" />
+    <text class="head" x="390" y="112">当前笔记操作台</text>
+    <text class="muted" x="390" y="140">Locked note: AI工具评测-示例.md</text>
+    <rect class="chip" x="390" y="168" width="86" height="28" />
+    <text class="chipText" x="408" y="187">Hermes</text>
+    <rect class="chip2" x="490" y="168" width="170" height="28" />
+    <text class="chipText" x="510" y="187">默认模型</text>
+    <rect class="chip2" x="675" y="168" width="140" height="28" />
+    <text class="chipText" x="695" y="187">均衡清晰</text>
+
+    <rect class="card" x="390" y="230" width="150" height="60" />
+    <text class="text" x="412" y="256">公众号改写</text>
+    <text class="dim" x="412" y="278">生成新文件</text>
+    <rect class="card" x="560" y="230" width="150" height="60" />
+    <text class="text" x="582" y="256">提炼选题</text>
+    <text class="dim" x="582" y="278">生成新文件</text>
+    <rect class="card" x="730" y="230" width="150" height="60" />
+    <text class="text" x="752" y="256">摘要路标</text>
+    <text class="dim" x="752" y="278">双链建议</text>
+    <rect class="card" x="390" y="310" width="150" height="60" />
+    <text class="text" x="412" y="336">补标签双链</text>
+    <text class="dim" x="412" y="358">先备份</text>
+    <rect class="callout" x="560" y="310" width="320" height="92" />
+    <text class="fake" x="585" y="342">Output folders</text>
+    <text class="muted" x="585" y="370">AI操作台/运行结果/当前笔记</text>
+    <text class="muted" x="585" y="394">AI操作台/备份</text>
+    <circle class="ok" cx="950" cy="104" r="6" />
+  </g>
+</svg>

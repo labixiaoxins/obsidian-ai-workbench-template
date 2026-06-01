@@ -4,6 +4,10 @@ Use this guide when explaining the template to a human user, writing onboarding 
 
 ## 1. Workflow Overview
 
+![Before and after fake vault screenshots](../assets/images/before-after-vault-mock.svg)
+
+The before/after image is a fictional mock Obsidian screenshot. It uses fake folder names, fake note titles, and fake media filenames to make the transformation easy to understand without exposing a real vault.
+
 ![Workflow overview](../assets/images/workflow-overview.svg)
 
 The workbench flow is:
@@ -41,4 +45,3 @@ In Obsidian:
 3. Pick engine, Hermes model, and writing style.
 4. Use output actions for safe exploration.
 5. Use modify actions only when you are comfortable with an automatic backup and replacement.
-
