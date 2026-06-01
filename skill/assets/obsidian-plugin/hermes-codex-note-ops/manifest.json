@@ -1,0 +1,9 @@
+{
+  "id": "hermes-codex-note-ops",
+  "name": "Hermes Codex Note Ops",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Operate on the current Obsidian note with Hermes or Codex.",
+  "author": "Obsidian AI Workbench Template",
+  "isDesktopOnly": true
+}

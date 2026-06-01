@@ -1,0 +1,88 @@
+{
+  "engine": "hermes",
+  "selectedHermesModel": "__default",
+  "actionTimeoutMinutes": 30,
+  "selectedProfileId": "balanced",
+  "resultsDir": "AI操作台/运行结果/当前笔记",
+  "backupDir": "AI操作台/备份",
+  "actions": [
+    {
+      "id": "wechat-article",
+      "label": "公众号改写",
+      "icon": "newspaper",
+      "kind": "output",
+      "usesProfile": true,
+      "description": "把当前笔记改写成一篇公众号长文。"
+    },
+    {
+      "id": "xiaohongshu-cards",
+      "label": "小红书拆条",
+      "icon": "image",
+      "kind": "output",
+      "usesProfile": true,
+      "description": "拆成 5 条小红书内容，并给出配图提示词。"
+    },
+    {
+      "id": "topic-bank",
+      "label": "提炼选题",
+      "icon": "lightbulb",
+      "kind": "output",
+      "usesProfile": false,
+      "description": "提炼公众号、视频号/B站、小红书选题池。"
+    },
+    {
+      "id": "summary-map",
+      "label": "摘要路标",
+      "icon": "map",
+      "kind": "output",
+      "usesProfile": false,
+      "description": "生成摘要、关键词、双链建议和下一步动作。"
+    },
+    {
+      "id": "polish-in-place",
+      "label": "备份后润色原文",
+      "icon": "wand-sparkles",
+      "kind": "modify",
+      "usesProfile": true,
+      "description": "先备份当前笔记，再润色原文。"
+    },
+    {
+      "id": "obsidian-format",
+      "label": "补标签双链",
+      "icon": "tags",
+      "kind": "modify",
+      "usesProfile": false,
+      "description": "先备份当前笔记，再补 frontmatter、摘要、标签和双链。"
+    },
+    {
+      "id": "auto-metadata",
+      "label": "智能补全元数据",
+      "icon": "file-cog",
+      "kind": "modify",
+      "usesProfile": false,
+      "description": "由 AI 分析当前笔记并补全 Frontmatter、分类标签与 Topic。"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "balanced",
+      "label": "均衡清晰",
+      "description": "保留信息密度，表达更清楚。"
+    },
+    {
+      "id": "creator",
+      "label": "创作者观点流",
+      "description": "开头有判断，适合公众号和深度内容。"
+    },
+    {
+      "id": "spoken",
+      "label": "上镜口播",
+      "description": "短句、口语、节奏强，适合录视频。"
+    },
+    {
+      "id": "tutorial",
+      "label": "专业教程",
+      "description": "步骤清楚，适合工具教程和操作指南。"
+    }
+  ]
+}

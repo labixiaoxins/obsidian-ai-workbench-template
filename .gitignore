@@ -1,0 +1,18 @@
+.DS_Store
+*.log
+.env
+.env.*
+node_modules/
+dist/
+tmp/
+
+# Local AI/editor state. Do not publish credentials, runtime state, or private notes.
+.codex/
+.hermes/
+.obsidian/workspace*.json
+.obsidian/cache/
+.obsidian/plugins/*/data.local.json
+AI操作台/运行日志/
+AI操作台/备份/
+AI操作台/运行结果/
+

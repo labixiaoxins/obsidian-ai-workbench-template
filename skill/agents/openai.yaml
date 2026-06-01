@@ -1,0 +1,8 @@
+interface:
+  display_name: "Obsidian AI Workbench"
+  short_description: "安装和维护中文 Obsidian AI 工作台"
+  brand_color: "#2563EB"
+  default_prompt: "Use $obsidian-ai-workbench-template to install a Chinese Obsidian AI workbench into my vault and verify the plugin."
+policy:
+  allow_implicit_invocation: true
+
