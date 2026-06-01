@@ -38,10 +38,31 @@ mkdir -p "$RESULTS_DIR" "$BACKUP_DIR" "$LOG_DIR"
 
 BASE="$(basename "$NOTE_REL" .md)"
 STAMP="$(date "+%Y%m%d-%H%M%S")"
-NOTE_HASH="$(printf "%s" "$NOTE_REL" | shasum -a 1 | awk '{print substr($1,1,10)}')"
+if command -v shasum >/dev/null 2>&1; then
+  NOTE_HASH="$(printf "%s" "$NOTE_REL" | shasum -a 1 | awk '{print substr($1,1,10)}')"
+elif command -v sha1sum >/dev/null 2>&1; then
+  NOTE_HASH="$(printf "%s" "$NOTE_REL" | sha1sum | awk '{print substr($1,1,10)}')"
+else
+  NOTE_HASH="$(printf "%s" "$NOTE_REL" | cksum | awk '{print substr($1,1,10)}')"
+fi
 RUN_ID="$STAMP-$$-$NOTE_HASH"
 SAFE_STEM="$RUN_ID"
 LAST_LOG="$LOG_DIR/$RUN_ID-$ACTION.log"
+TMP_FILES=()
+
+make_tmp() {
+  local tmp
+  tmp="$(mktemp)"
+  TMP_FILES+=("$tmp")
+  printf "%s\n" "$tmp"
+}
+
+cleanup_tmp() {
+  if [ "${#TMP_FILES[@]}" -gt 0 ]; then
+    rm -f "${TMP_FILES[@]}"
+  fi
+}
+trap cleanup_tmp EXIT
 
 resolve_cli() {
   local name="$1"
@@ -168,10 +189,9 @@ run_codex() {
     echo "Codex CLI 未找到。请确认 Codex 已安装。" >&2
     return 127
   fi
-  result_file="$(mktemp)"
+  result_file="$(make_tmp)"
   "$codex_bin" exec --skip-git-repo-check --ephemeral --ignore-rules -s danger-full-access -C "$VAULT_ROOT" -o "$result_file" "请读取这个本地文件并严格执行其中的任务要求，只输出最终 Markdown 结果，不要解释过程：$prompt_file" >/dev/null
   cat "$result_file"
-  rm -f "$result_file"
 }
 
 run_ai() {
@@ -230,26 +250,16 @@ run_ai_to_file() {
 
 strip_markdown_fence() {
   local file="$1"
-  python3 - "$file" <<'PY'
-import pathlib
-import re
-import sys
-
-path = pathlib.Path(sys.argv[1])
-text = path.read_text(encoding="utf-8")
-match = re.fullmatch(r"\s*```(?:markdown|md)?\s*\n(.*?)\n```\s*", text, re.S | re.I)
-if match:
-    path.write_text(match.group(1).rstrip() + "\n", encoding="utf-8")
-PY
+  perl -0pi -e 's/^\s*```(?:markdown|md)?\s*\n(.*?)\n```\s*$/$1\n/is' "$file"
 }
 
 run_output_action() {
   local out="$RESULTS_DIR/$(action_label)-$SAFE_STEM.md"
   local prompt_file
-  prompt_file="$(mktemp)"
+  prompt_file="$(make_tmp)"
   build_prompt > "$prompt_file"
   if ! run_ai_to_file "$prompt_file" "$out"; then
-    rm -f "$out" "$prompt_file"
+    rm -f "$out"
     exit 1
   fi
   strip_markdown_fence "$out"
@@ -259,7 +269,6 @@ run_output_action() {
     printf "源路径: \`%s\`\n\n" "$NOTE_REL"
     printf "运行日志: \`%s\`\n" "${LAST_LOG#$VAULT_ROOT/}"
   } >> "$out"
-  rm -f "$prompt_file"
   echo "OUTPUT:${out#$VAULT_ROOT/}"
 }
 
@@ -268,8 +277,8 @@ run_modify_action() {
   local next_file
   local prompt_file
   cp "$NOTE_ABS" "$backup"
-  next_file="$(mktemp)"
-  prompt_file="$(mktemp)"
+  next_file="$(make_tmp)"
+  prompt_file="$(make_tmp)"
   {
     build_prompt
     cat <<EOF
@@ -279,17 +288,14 @@ run_modify_action() {
 EOF
   } > "$prompt_file"
   if ! run_ai_to_file "$prompt_file" "$next_file"; then
-    rm -f "$next_file" "$prompt_file"
     exit 1
   fi
   strip_markdown_fence "$next_file"
   if [ ! -s "$next_file" ]; then
     echo "AI 返回为空，已保留备份且未覆盖原文: ${backup#$VAULT_ROOT/}" >&2
-    rm -f "$next_file" "$prompt_file"
     exit 1
   fi
   cp "$next_file" "$NOTE_ABS"
-  rm -f "$next_file" "$prompt_file"
   echo "OUTPUT:$NOTE_REL"
 }
 

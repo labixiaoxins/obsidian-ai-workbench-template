@@ -22,12 +22,22 @@ bash skill/scripts/install-template.sh "/path/to/Your Obsidian Vault"
 ## 依赖
 
 - Obsidian Desktop。
+- macOS 或 Linux。当前插件通过 Bash 运行本地动作脚本，Windows 需要 WSL/Git Bash 适配后再用。
 - 可选：Hermes CLI，用于默认 AI 动作。
 - 可选：Codex CLI，用于把引擎切到 Codex 后执行动作。
 
 ## 安全边界
 
 这个仓库只保存模板和插件代码，不保存个人 Vault 内容、API key、OAuth token、cookie、`.codex`、`.hermes` 私有状态、会话历史、运行日志或备份文件。跨设备同步时建议只同步本仓库或你的公开模板仓库，真实知识库请单独选择 Obsidian Sync、私有 Git 仓库或其他受控方式。
+
+如果你的 Obsidian Vault 本身也用 Git 同步，请确保 Vault 的 `.gitignore` 至少包含：
+
+```text
+AI操作台/运行日志/
+AI操作台/备份/
+```
+
+操作台里“复制完整路径”只适合本机调试。对外分享、发给公开 LLM 或写文章时，优先使用“复制相对路径”，避免暴露本机用户名和目录结构。
 
 ## 目录
 
@@ -48,4 +58,3 @@ examples/
 ## 发布建议
 
 如果你要把这个项目写成公众号文章，可以把重点放在“混乱素材库到可操作知识工作台”的转变，而不是只介绍插件。推荐结构见 `docs/publishing-notes.md`。
-

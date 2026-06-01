@@ -2,6 +2,8 @@
 
 `Hermes Codex Note Ops` is a desktop-only Obsidian plugin.
 
+The bundled runner currently targets macOS/Linux shell environments. Windows users should run it through WSL/Git Bash adaptation or treat Windows support as a separate port.
+
 ## Flow
 
 1. The side panel locks onto the current Markdown file.
@@ -23,4 +25,3 @@ The plugin reads local Hermes model metadata from:
 - `~/.hermes/config.yaml`
 
 Only provider/model names are used. These files are not part of the template and must not be copied into Git.
-

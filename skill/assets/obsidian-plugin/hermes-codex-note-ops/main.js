@@ -450,6 +450,9 @@ module.exports = class HermesCodexNoteOpsPlugin extends Plugin {
   }
 
   runAction(actionId, notePath, profileId, hermesModelSpec) {
+    if (process.platform === "win32") {
+      return Promise.reject(new Error("当前版本需要 macOS/Linux Bash 环境。Windows 请先通过 WSL/Git Bash 适配后再运行本地动作脚本。"));
+    }
     const vaultRoot = this.getVaultRoot();
     const scriptPath = path.join(vaultRoot, SCRIPT_PATH);
     const timeout = Math.max(1, Number(this.settings.actionTimeoutMinutes || 30)) * 60 * 1000;

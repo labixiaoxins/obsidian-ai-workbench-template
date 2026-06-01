@@ -39,9 +39,12 @@ copy_tree() {
   local dst="$2"
   mkdir -p "$dst"
   (cd "$src" && find . -type d -print) | while IFS= read -r dir; do
+    dir="${dir#./}"
+    [ -z "$dir" ] && continue
     mkdir -p "$dst/$dir"
   done
   (cd "$src" && find . -type f -print) | while IFS= read -r rel; do
+    rel="${rel#./}"
     local from="$src/$rel"
     local to="$dst/$rel"
     mkdir -p "$(dirname "$to")"
@@ -75,3 +78,21 @@ Next steps:
   4. Open a Markdown note and click the side-ribbon workbench icon.
 EOF
 
+if [ ! -f "$VAULT_PATH/.gitignore" ]; then
+  cat > "$VAULT_PATH/.gitignore" <<'EOF'
+# AI Workbench Operations
+AI操作台/运行日志/
+AI操作台/备份/
+EOF
+  echo "Created vault .gitignore with AI workbench privacy rules."
+else
+  if ! grep -Fq "AI操作台/运行日志/" "$VAULT_PATH/.gitignore"; then
+    cat >> "$VAULT_PATH/.gitignore" <<'EOF'
+
+# AI Workbench Operations
+AI操作台/运行日志/
+AI操作台/备份/
+EOF
+    echo "Appended AI workbench privacy rules to vault .gitignore."
+  fi
+fi
