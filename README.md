@@ -12,12 +12,24 @@
 
 ## 快速安装
 
+![Install flow](skill/assets/images/install-flow.svg)
+
 ```bash
 cd /path/to/obsidian-ai-workbench-template
 bash skill/scripts/install-template.sh "/path/to/Your Obsidian Vault"
 ```
 
 安装后在 Obsidian 里打开 `Settings -> Community plugins`，启用 `Hermes Codex Note Ops`，再点击左侧丝光图标打开“当前笔记操作台”。
+
+## 图解使用
+
+![Workflow overview](skill/assets/images/workflow-overview.svg)
+
+### 操作台界面
+
+![Workbench UI map](skill/assets/images/workbench-ui-map.svg)
+
+完整图解步骤见 [Visual Usage Guide](skill/references/usage-guide.md)。
 
 ## 依赖
 

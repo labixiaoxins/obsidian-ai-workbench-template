@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">Workbench UI map</title>
+  <desc id="desc">A labeled mockup of the AI workbench panel showing engine selection, model selection, writing profile, action groups, manual handoff, and preview.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .app { fill: #ffffff; stroke: #d8dee9; stroke-width: 2; rx: 18; }
+      .side { fill: #111827; rx: 18; }
+      .panel { fill: #f1f5f9; stroke: #d8dee9; stroke-width: 1.5; rx: 12; }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; rx: 10; }
+      .blue { fill: #2563eb; }
+      .green { fill: #16a34a; }
+      .orange { fill: #f97316; }
+      .title { fill: #0f172a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 28px; font-weight: 700; }
+      .label { fill: #0f172a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 18px; font-weight: 700; }
+      .body { fill: #475569; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; }
+      .white { fill: #ffffff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; font-weight: 700; }
+      .small { fill: #64748b; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; }
+      .call { fill: #eff6ff; stroke: #2563eb; stroke-width: 2; rx: 12; }
+      .line { stroke: #2563eb; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .input { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.4; rx: 8; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb" />
+    </marker>
+  </defs>
+  <rect class="bg" width="1120" height="720" />
+  <text class="title" x="48" y="58">Current Note Workbench: what each area does</text>
+  <text class="body" x="48" y="90">A privacy-safe mockup of the Obsidian side panel. It shows the intended workflow without exposing a real vault.</text>
+
+  <rect class="app" x="52" y="125" width="700" height="535" />
+  <rect class="side" x="52" y="125" width="92" height="535" />
+  <circle cx="98" cy="182" r="20" class="blue" />
+  <text class="white" x="93" y="188">AI</text>
+  <rect class="panel" x="176" y="155" width="540" height="82" />
+  <text class="label" x="202" y="188">Current note workbench</text>
+  <text class="body" x="202" y="215">Run fixed AI actions on the active Markdown note.</text>
+
+  <rect class="panel" x="176" y="255" width="540" height="76" />
+  <rect class="input" x="202" y="278" width="120" height="32" />
+  <text class="small" x="222" y="299">Engine</text>
+  <rect class="input" x="340" y="278" width="170" height="32" />
+  <text class="small" x="358" y="299">Hermes model</text>
+  <rect class="input" x="528" y="278" width="150" height="32" />
+  <text class="small" x="548" y="299">Writing style</text>
+
+  <rect class="panel" x="176" y="350" width="540" height="118" />
+  <text class="label" x="202" y="382">Output actions</text>
+  <rect class="card" x="202" y="400" width="150" height="42" />
+  <text class="small" x="222" y="426">WeChat article</text>
+  <rect class="card" x="370" y="400" width="150" height="42" />
+  <text class="small" x="390" y="426">Topic bank</text>
+  <rect class="card" x="538" y="400" width="140" height="42" />
+  <text class="small" x="558" y="426">Summary map</text>
+
+  <rect class="panel" x="176" y="487" width="540" height="80" />
+  <text class="label" x="202" y="520">Modify actions</text>
+  <text class="body" x="202" y="548">Backup first, then polish, tag, or update metadata.</text>
+
+  <rect class="panel" x="176" y="585" width="540" height="48" />
+  <text class="body" x="202" y="614">Manual handoff: copy relative path or prompt for deeper chat.</text>
+
+  <rect class="call" x="805" y="155" width="255" height="70" />
+  <text class="label" x="830" y="184">1. Pick engine/model</text>
+  <text class="body" x="830" y="207">Use default or a Hermes model.</text>
+  <line class="line" x1="805" y1="192" x2="675" y2="292" />
+
+  <rect class="call" x="805" y="270" width="255" height="78" />
+  <text class="label" x="830" y="300">2. Choose an action</text>
+  <text class="body" x="830" y="323">Output actions create new files.</text>
+  <line class="line" x1="805" y1="310" x2="675" y2="420" />
+
+  <rect class="call" x="805" y="400" width="255" height="78" />
+  <text class="label" x="830" y="430">3. Modify safely</text>
+  <text class="body" x="830" y="453">Original note is backed up first.</text>
+  <line class="line" x1="805" y1="438" x2="675" y2="528" />
+
+  <rect class="call" x="805" y="530" width="255" height="78" />
+  <text class="label" x="830" y="560">4. Review results</text>
+  <text class="body" x="830" y="583">Open outputs, backups, and logs.</text>
+  <line class="line" x1="805" y1="570" x2="675" y2="610" />
+</svg>
+

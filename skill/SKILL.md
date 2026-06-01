@@ -18,15 +18,16 @@ Use this skill when the user wants to install or maintain the Obsidian AI workbe
 ## Standard Workflow
 
 1. Confirm the target Vault path.
-2. Read `references/vault-structure.md` if the user asks about the taxonomy.
-3. Run `scripts/install-template.sh <vault-path>` from this skill directory when installing.
-4. Ask the user to enable `Hermes Codex Note Ops` inside Obsidian Community plugins if it is not already enabled.
-5. Verify:
+2. Read `references/usage-guide.md` if the user wants visual instructions, onboarding material, or a public walkthrough.
+3. Read `references/vault-structure.md` if the user asks about the taxonomy.
+4. Run `scripts/install-template.sh <vault-path>` from this skill directory when installing.
+5. Ask the user to enable `Hermes Codex Note Ops` inside Obsidian Community plugins if it is not already enabled.
+6. Verify:
    - `.obsidian/plugins/hermes-codex-note-ops/main.js` exists.
    - `.hermes-codex-note-ops/scripts/note-action.sh` exists and is executable.
    - `AI操作台/运行结果/当前笔记/00-当前笔记说明.md` exists.
    - `AI操作台/备份/00-备份说明.md` exists.
-6. For plugin edits, syntax-check with:
+7. For plugin edits, syntax-check with:
 
 ```bash
 node --check .obsidian/plugins/hermes-codex-note-ops/main.js
@@ -43,7 +44,7 @@ bash -n .hermes-codex-note-ops/scripts/note-action.sh
 
 ## Useful References
 
+- `references/usage-guide.md`: visual onboarding guide with workflow, install, and UI diagrams.
 - `references/vault-structure.md`: Chinese Vault folders and intended use.
 - `references/plugin-architecture.md`: how the Obsidian plugin calls the shell action runner.
 - `references/security.md`: publishing and cross-device safety rules.
-

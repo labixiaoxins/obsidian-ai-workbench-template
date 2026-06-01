@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520" role="img" aria-labelledby="title desc">
+  <title id="title">Obsidian AI Workbench workflow overview</title>
+  <desc id="desc">A four-step diagram showing install template, open Obsidian, choose an action, and review output or backup.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .card { fill: #ffffff; stroke: #d8dee9; stroke-width: 2; rx: 18; }
+      .head { fill: #0f172a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 27px; font-weight: 700; }
+      .body { fill: #334155; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 18px; }
+      .small { fill: #64748b; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; }
+      .num { fill: #ffffff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 22px; font-weight: 700; }
+      .arrow { stroke: #2563eb; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .chip { fill: #dbeafe; stroke: #93c5fd; stroke-width: 1.5; rx: 14; }
+      .chipText { fill: #1d4ed8; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; font-weight: 600; }
+      .icon { fill: #2563eb; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb" />
+    </marker>
+  </defs>
+  <rect class="bg" width="1120" height="520" />
+  <text class="head" x="48" y="58">Obsidian AI Workbench: from template to publishable notes</text>
+  <text class="body" x="48" y="92">A safe local workflow for installing the vault structure, running AI actions, and keeping backups separate.</text>
+
+  <rect class="card" x="48" y="150" width="230" height="230" />
+  <circle cx="86" cy="188" r="22" fill="#2563eb" />
+  <text class="num" x="79" y="196">1</text>
+  <path class="icon" d="M82 250h78v16H82zm0 30h116v16H82zm0 30h86v16H82z" />
+  <text class="head" x="82" y="224" font-size="23">Install</text>
+  <text class="body" x="82" y="348">Run the installer</text>
+  <text class="small" x="82" y="374">copy template, plugin, actions</text>
+
+  <line class="arrow" x1="292" y1="265" x2="362" y2="265" />
+
+  <rect class="card" x="382" y="150" width="230" height="230" />
+  <circle cx="420" cy="188" r="22" fill="#2563eb" />
+  <text class="num" x="413" y="196">2</text>
+  <rect class="chip" x="416" y="245" width="138" height="34" />
+  <text class="chipText" x="433" y="267">AI workbench</text>
+  <rect class="chip" x="416" y="292" width="156" height="34" />
+  <text class="chipText" x="433" y="314">current note</text>
+  <text class="head" x="416" y="224" font-size="23">Open Obsidian</text>
+  <text class="small" x="416" y="352">enable the local plugin</text>
+
+  <line class="arrow" x1="626" y1="265" x2="696" y2="265" />
+
+  <rect class="card" x="716" y="150" width="230" height="230" />
+  <circle cx="754" cy="188" r="22" fill="#2563eb" />
+  <text class="num" x="747" y="196">3</text>
+  <rect class="chip" x="750" y="245" width="92" height="34" />
+  <text class="chipText" x="767" y="267">Hermes</text>
+  <rect class="chip" x="852" y="245" width="70" height="34" />
+  <text class="chipText" x="869" y="267">Codex</text>
+  <rect class="chip" x="750" y="292" width="142" height="34" />
+  <text class="chipText" x="767" y="314">AI actions</text>
+  <text class="head" x="750" y="224" font-size="23">Choose action</text>
+  <text class="small" x="750" y="352">rewrite, summarize, tag, polish</text>
+
+  <line class="arrow" x1="960" y1="265" x2="1030" y2="265" />
+
+  <rect class="card" x="1030" y="150" width="40" height="230" opacity="0.35" />
+  <rect class="card" x="48" y="410" width="1022" height="60" />
+  <text class="head" x="82" y="448" font-size="22">Output rule:</text>
+  <text class="body" x="218" y="448">safe actions create new files; modify actions create backups before changing the current note.</text>
+</svg>
+
